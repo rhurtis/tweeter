@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  height: 120px;
+  font-family: 'Bungee', cursive;
+  color: #ffffff;
+  background-color: #4056A1;
+  
+
+  
+  
+  width: 98.5%;
+  max-width: 100%;
+      
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+
+
+
+
+ }
