@@ -11,13 +11,13 @@
 
 
 
-.container .new-tweet #tweet-text {
+/*.container .new-tweet */ #tweet-text {
   
   display: flex;
   color:blue;
-  background-color: #f4f1ec;
+  background-color: red;
   font-size: 42px;
-  -webkit-text-stroke: 2px black; /* width and color */
+  /*-webkit-text-stroke: 2px black;  width and color */
   width: 90%;
   flex-direction: column;
   justify-content: center;
