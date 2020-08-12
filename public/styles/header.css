@@ -6,32 +6,15 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
-
-
-
-  
 }
 
 
 header div h2 {
   display: flex;
-  
   flex-direction: column;
   justify-content: flex-start;
   background-color: #b8ffed;
   background-image: url("https://www.transparenttextures.com/patterns/white-brushed.png");
-  
-
-
-  /*align-self: flex-end;*/
-
-/*
-  position: absolute;
-  bottom: 0;*/
-
-
 }
 
 

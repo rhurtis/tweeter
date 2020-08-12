@@ -1,0 +1,48 @@
+.container .new-tweet {
+  display: flex;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 42px;
+  width: 90%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+.container .new-tweet #tweet-text {
+  
+  display: flex;
+  color:blue;
+  background-color: #f4f1ec;
+  font-size: 42px;
+  -webkit-text-stroke: 2px black; /* width and color */
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  
+  display: flex;
+  color:red;
+  background-color: red;
+ 
+}
+
+
+.counter {
+  
+  display: flex;
+  color:blue;
+  background-color: #f4f1ec;
+  font-size: 42px;
+  width: 90%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+

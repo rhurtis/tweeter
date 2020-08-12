@@ -23,6 +23,9 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
 
 
     <!-- External JS -->
@@ -30,15 +33,27 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- character counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!-- code for sticky navbar JS
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script> -->
+
+
+
+
   </head>
 
   <body>
+   
+   
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class='navbar'>
       <span>tweeter - changing index html file again</span>
     </nav>
 
-
+    <!-- nav bar ends(fixed) -->
 
 
     <header>
@@ -54,7 +69,24 @@
 
     hello this is a test message for the body tag.
     <!-- Page-specific (main) content here -->
-    <main class="container"> This is the main tag.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-HODOR IPSUM</main>
+    <main class="container"> 
+      
+      <section class='paragraph'>This is the main tag.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        HODOR IPSUM</section>
+
+<section class="new-tweet">
+  <h2>Compose Tweet</h2>
+  <form action="/tweets" method="POST">
+    <label for="tweet-text">What are you humming about?</label>
+    <textarea name="text" id="tweet-text"></textarea>
+    <div>
+      <button type="submit">Tweet</button>
+      <output name="counter" class="counter" for="tweet-text">140</output>
+    </div>
+  </form>
+</section>
+
+
+</main>
   </body>
 </html>
