@@ -77,15 +77,23 @@ const sampleTweetObject = {
 
   }
 
-    
+    // renderTweets loops through an array of objects, using createTweetElement to append data to the site.
   const renderTweets = function (tweets) {
-    
-    for(let tweet of tweets) {
-      createTweetElement(tweet)
-
+      for(let tweet of tweets) {
+        createTweetElement(tweet);
     }
   }
   renderTweets(sampleTweetObjects);
+
+  //creating an ajax post request to work with the tweet button.
+  
+
+  $( "#new-tweet-form" ).submit(function( event ) {
+    //alert( "Handler for .submit() called." );
+    event.preventDefault();
+    $.ajax('/tweets', {method:'POST', data: $( this ).serialize() })
+  });
+
 
 
 
