@@ -97,6 +97,7 @@
 .container .tweet-holder .whole-tweet {
   
   border-style: solid;
+  margin-bottom:30px;
 }
 
 /* Adds a solid line underneath the tweet message, separating the time and buttons below.*/
@@ -149,4 +150,14 @@
   border-width: thick thick thick thick;
   border-color:#4056A1;
   box-shadow: 5px 10px;
+}
+
+
+.container .tweet-holder .whole-tweet:hover .tweeter-handle  {
+  opacity: 1;
+}
+
+.container .tweet-holder .whole-tweet .tweeter-handle {
+  
+  opacity: 0;
 }
