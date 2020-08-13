@@ -74,17 +74,49 @@
       <section class='paragraph'>This is the main tag.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         HODOR IPSUM</section>
 
-<section class="new-tweet">
-  <h2>Compose Tweet</h2>
-  <form action="/tweets" method="POST">
-    <label for="tweet-text">What are you humming about?</label>
-    <textarea name="text" id="tweet-text"></textarea>
-    <div>
-      <button type="submit">Tweet</button>
-      <output name="counter" class="counter" for="tweet-text" id='charCounter'>140</output>
-    </div>
-  </form>
-</section>
+      <section class="new-tweet">
+        <h2 id='composeTweet'>Compose Tweet</h2>
+        <form action="/tweets" method="POST">
+          
+          <textarea name="text" id="tweet-text" placeholder='What are you humming about?'></textarea>
+          <div id='buttonWITHcount'>
+            <button type="submit" id='tweet-button'>Tweet</button>
+            <output name="counter" class="counter" for="tweet-text" id='charCounter'>140</output>
+          </div>
+        </form>
+      </section>
+
+
+        <!-- This section is designated for holding the tweets. -->
+        <section class="tweet-holder" >
+
+          <div class='whole-tweet'>
+            <article> 
+                <div class='user-information'>
+                  <h3 class='actual-name'>
+                    <picture>
+                    </picture>
+                    Tweeter Name
+                  </h3>
+                  <h3 class='tweeter-handle'>Tweeter Handle</h3>
+                </div>
+                <p>This section here will contain the actual tweet message.</p>
+                
+                <div class='utility'> 
+                  <div class='time'>7 days ago</div>
+                  <div class='misc-buttons'>
+                    <button>Retweet</button> 
+                    <button>Save</button> 
+                    <button>Report</button> 
+                  
+                  </div>
+
+                </div>
+
+            </article>
+          </div>
+          
+        </section>
 
 
 </main>
