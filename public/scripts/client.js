@@ -73,8 +73,8 @@
    </article>
  </div>`
 
- $(".tweet-holder").append(tweetElement);
-
+ //$(".tweet-holder").append(tweetElement);
+ $(".tweet-holder").prepend(tweetElement);
   }
 
     // renderTweets loops through an array of objects, using createTweetElement to append data to the site.
