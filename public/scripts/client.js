@@ -87,11 +87,40 @@
   
 
   //creating an ajax post request to work with the tweet button.
-    $( "#new-tweet-form" ).submit(function( event ) {
-    //alert( "Handler for .submit() called." );
-    event.preventDefault();
-    $.ajax('/tweets', {method:'POST', data: $( this ).serialize() })
-  });
+  //   $( "#new-tweet-form" ).submit(function( event ) {
+  //   //alert( "Handler for .submit() called." );
+  //   event.preventDefault();
+  //   $.ajax('/tweets', {method:'POST', data: $( this ).serialize() })
+  // });
+
+  // checking text area before submission
+    //creating an ajax post request to work with the tweet button.
+    
+    
+      
+     $( "#new-tweet-form" ).submit(function( event ) {
+
+        event.preventDefault();
+        let charactersT = $('#tweet-text').val();
+        console.log(charactersT);
+         if (charactersT.length === 0) {
+          alert( "you can't enter blank tweet" );
+         } else if (charactersT.length > 140) {
+          alert( "you've exceed 140 characters" );
+         } else {   
+          $.ajax('/tweets', {method:'POST', data: $( this ).serialize() });
+          location.reload();
+        };
+      
+    });
+
+
+
+
+
+
+
+
 
 
 
