@@ -75,11 +75,19 @@
 }
 
 #composeTweet {
-  padding-top:100px;
+  /*padding-top:100px;*/
   margin: 0px;
   font-size: 50px;
 }
 
+#error-message1 {
+  padding-top: 100px;
+  display: none;
+}
+#error-message2 {
+  padding-top: 100px;
+  display: none;
+}
 
 /*############################################# The css below is for the tweet-holder section.#############################################*/
 
@@ -158,6 +166,5 @@
 }
 
 .container .tweet-holder .whole-tweet .tweeter-handle {
-  
   opacity: 0;
 }

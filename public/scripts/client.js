@@ -104,12 +104,19 @@
         let charactersT = $('#tweet-text').val();
         console.log(charactersT);
          if (charactersT.length === 0) {
-          alert( "you can't enter blank tweet" );
+          //alert( "you can't enter blank tweet" );
+         // $('#error-message').css('opacity','1');
+          $('#error-message1').slideDown(1000);
          } else if (charactersT.length > 140) {
-          alert( "you've exceed 140 characters" );
+          //alert( "you've exceed 140 characters" );
+          //$('#error-message').css('opacity','1').slideDown(5000);
+          $('#error-message2').slideDown(1000);
+          
          } else {   
           $.ajax('/tweets', {method:'POST', data: $( this ).serialize() });
-          location.reload();
+          $('#error-message1').slideUp(1000);
+          $('#error-message2').slideUp(1000);
+          setTimeout(() => {location.reload()}, 1001);
         };
       
     });
