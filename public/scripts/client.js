@@ -4,43 +4,43 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const sampleTweetObjects =  [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+// const sampleTweetObjects =  [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd" },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1461113959088
+//   }
+// ];
 
-const sampleTweetObject = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png"
-    ,
-    "handle": "@SirIsaac"
-  },
-  "content": {
-    "text": "If I have seen further it is by standing on the shoulders of giants"
-  },
-  "created_at": 1461116232227
-}
+// const sampleTweetObject = {
+//   "user": {
+//     "name": "Newton",
+//     "avatars": "https://i.imgur.com/73hZDYK.png"
+//     ,
+//     "handle": "@SirIsaac"
+//   },
+//   "content": {
+//     "text": "If I have seen further it is by standing on the shoulders of giants"
+//   },
+//   "created_at": 1461116232227
+// }
 
 
  $(document).ready(function() {
@@ -83,12 +83,11 @@ const sampleTweetObject = {
         createTweetElement(tweet);
     }
   }
-  renderTweets(sampleTweetObjects);
-
-  //creating an ajax post request to work with the tweet button.
+  //renderTweets(sampleTweetObjects);
   
 
-  $( "#new-tweet-form" ).submit(function( event ) {
+  //creating an ajax post request to work with the tweet button.
+    $( "#new-tweet-form" ).submit(function( event ) {
     //alert( "Handler for .submit() called." );
     event.preventDefault();
     $.ajax('/tweets', {method:'POST', data: $( this ).serialize() })
@@ -96,7 +95,16 @@ const sampleTweetObject = {
 
 
 
-
+  //loadTweets; a fcn responsible for fetching tweets from the /tweets page.
+  const loadTweets = function () {
+   return $.ajax('/tweets',{method: 'GET', data: $( this ).serialize() }).then(function (tweetResponse) {
+      renderTweets(tweetResponse);
+    })
+    
+  };
+  
+  loadTweets().then();
+  //renderTweets(loadTweets);
  });
   
 
