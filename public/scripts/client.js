@@ -57,7 +57,7 @@
          </h3>
          <h3 class='tweeter-handle'>${tweet['user']['handle']}</h3>
        </div>
-       <p>${tweet['content']['text']}</p>
+       <p>${escape(tweet['content']['text'])}</p>
        
        <div class='utility'> 
          <div class='time'>${tweet['created_at']}</div>
@@ -114,6 +114,9 @@
           
          } else {   
           $.ajax('/tweets', {method:'POST', data: $( this ).serialize() });
+          
+          
+          
           $('#error-message1').slideUp(1000);
           $('#error-message2').slideUp(1000);
           setTimeout(() => {location.reload()}, 1001);
@@ -144,3 +147,9 @@
  });
   
 
+// XSS prevention
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};

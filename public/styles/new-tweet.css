@@ -53,13 +53,6 @@
   font-weight: bold;
   
 }
-/* .button{
-  
-  display: flex;
-  color:red;
-  background-color: red;
- 
-} */
 
 
 .counter {
@@ -168,3 +161,81 @@
 .container .tweet-holder .whole-tweet .tweeter-handle {
   opacity: 0;
 }
+
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* RESPONSIVE STUFF */
+
+
+
+/* 
+The styling when the screen gets smaller.
+Need to find a way to take the picture/name to the nav bar.
+*/
+
+
+@media only screen and (max-width: 1024px) {
+  /*
+  header {
+    width: 40%;
+    display: inline-block;
+  }
+
+  main {
+    width: 40%;
+    display: inline-block;
+  }
+*/
+
+header {
+  padding-top: 100px;
+  padding-left: 200px;
+  background-color: #4056A1;
+}
+
+
+
+}
+
+
+
+
+/*
+The styling when the screen is greater than 1024px.
+Need to find a way to get the profile pic/username to appear on the left.
+*/
+@media only screen and (min-width: 1024px) {
+
+header {
+  width: 40%;
+  display: inline-block;
+  margin-top: 100px;
+  padding-left:200px;
+}
+
+main {
+  width: 40%;
+  display: inline-block;
+  margin-left: 200px;
+}
+
+header div h2 {
+  /*
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #b8ffed;
+  */
+  background-image: url("https://www.transparenttextures.com/patterns/white-brushed.png");
+  padding-left: 50px;
+}
+
+#tweet-link {
+  margin-left: 700px;
+}
+
+}
+
+

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -50,31 +53,36 @@
    
     <!-- Top nav bar (fixed) -->
     <nav class='navbar'>
-      <span>tweeter - changing index html file again</span>
+      <span id='logo'>tweeter</span>
+      <a href='#composeTweet' id='tweet-link'>Compose</a>
     </nav>
 
     <!-- nav bar ends(fixed) -->
 
+    
+      <header id='profile-info'>
+       
+          <div>
+              <img src="/images/profile-hex.png"> 
+          </div>
+          <br>
+          <div>
+              <h2>Your Name</h2>
+          </div>
+       
+      </header>
+    
 
-    <header>
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-  </header>
 
-
-    hello this is a test message for the body tag.
+    
     <!-- Page-specific (main) content here -->
     <main class="container"> 
       
-      <section class='paragraph'>This is the main tag.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      <!--
+      <section class='paragraph' id='tweet-compose'>This is the main tag.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         HODOR IPSUM</section>
-
-      <section class="new-tweet">
+      -->
+      <section class="new-tweet" >
         <div id="error-message1"> <img src="/images/attention-symbol1.png"> You can not send a blank tweet.</div>
         <div id="error-message2"> <img src="/images/attention-symbol1.png"> You have exceeded 140 characters.</div>
         <h2 id='composeTweet'>Compose Tweet</h2>

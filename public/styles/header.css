@@ -1,4 +1,8 @@
+/*
 header {
+
+
+  
   display: flex;
   height: 400px;
   width: 100%;
@@ -6,16 +10,20 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  
+} */
 
-
+/*
 header div h2 {
+  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background-color: #b8ffed;
+  
   background-image: url("https://www.transparenttextures.com/patterns/white-brushed.png");
 }
 
 
 
+*/
