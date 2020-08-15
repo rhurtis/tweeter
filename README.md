@@ -21,5 +21,5 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 ## Screenshots
-!["Tweet Section"](docs/tweeter-posts.png)
 !["Profile Section"](docs/profile-section.png)
+!["Tweet Section"](docs/tweeter-posts.png)
