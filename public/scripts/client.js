@@ -60,7 +60,7 @@
        <p>${escape(tweet['content']['text'])}</p>
        
        <div class='utility'> 
-         <div class='time'>${tweet['created_at']}</div>
+         <div class='time'>${theTimeIs()}</div>
          <div class='misc-buttons'>
            <button>Retweet</button> 
            <button>Save</button> 
@@ -153,3 +153,17 @@ const escape =  function(str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+
+
+
+// getting time in a readable way
+const theTimeIs = function(){
+let date = new Date();
+let minutes = date.getMinutes();
+let hour = date.getHours();
+let day = date.getDate();
+let month = date.getMonth();
+let year = date.getFullYear();
+return `${hour}:${minutes} ${day}-${month + 1} -${year}`;
+}
+// tweet['created_at'] this works
