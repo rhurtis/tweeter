@@ -154,6 +154,11 @@
     padding-left: 200px;
     background-color: #4056A1;
   }
+  header div h2 {
+    background-image: url("https://www.transparenttextures.com/patterns/white-brushed.png");
+    padding-left: 50px;
+    max-width:250px;
+  }
 
   #logo {
     padding-right: 50px;
