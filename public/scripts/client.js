@@ -44,9 +44,7 @@ $(document).ready(function() {
     for (let tweet of tweets) {
       createTweetElement(tweet);
     }
-  };
-
-    
+  };    
       
   $("#new-tweet-form").submit(function(event) {
 
@@ -55,9 +53,14 @@ $(document).ready(function() {
     console.log(charactersT);
     if (charactersT.length === 0) {
       $('#error-message1').slideDown(1000);
+      if (!(charactersT.length > 140)) {
+        $('#error-message2').slideUp(1000);
+      }
     } else if (charactersT.length > 140) {
       $('#error-message2').slideDown(1000);
-          
+      if (!(charactersT.length === 0)) {
+        $('#error-message1').slideUp(1000);
+      }    
     } else {
       $.ajax('/tweets', {method:'POST', data: $(this).serialize() });                 
       $('#error-message1').slideUp(1000);
@@ -69,28 +72,14 @@ $(document).ready(function() {
       
   });
 
-
-
-
-
-
-
-
-
-
-
   //loadTweets; a fcn responsible for fetching tweets from the /tweets page.
   const loadTweets = function() {
     return $.ajax('/tweets',{method: 'GET', data: $(this).serialize() }).then(function(tweetResponse) {
       renderTweets(tweetResponse);
     });
-    
   };
-  
   loadTweets().then();
-  
-});
-  
+}); 
 
 // XSS prevention
 const escape =  function(str) {
@@ -98,8 +87,6 @@ const escape =  function(str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-
-
 
 // getting time in a readable way
 const theTimeIs = function() {

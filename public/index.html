@@ -16,7 +16,6 @@
     <!-- Google Fonts: Source Sans Pro, 700 and 300 both in Italic-->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
 
-
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
@@ -29,8 +28,6 @@
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-
-
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -39,55 +36,33 @@
 
     <!-- character counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
-    <!-- code for sticky navbar JS
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script> -->
-
-
-
-
   </head>
 
-  <body>
-   
-   
+  <body>  
     <!-- Top nav bar (fixed) -->
     <nav class='navbar'>
       <span id='logo'>tweeter</span>
       <a href='#composeTweet' id='tweet-link'>Compose</a>
     </nav>
 
-    <!-- nav bar ends(fixed) -->
-
-    
+    <!-- nav bar ends(fixed) -->    
       <header id='profile-info'>
-       
           <div>
               <img src="/images/profile-hex.png"> 
           </div>
           <br>
           <div>
-              <h2>Your Name</h2>
+              <h2>Ryan Hurtis</h2>
           </div>
-       
       </header>
-    
-
-
-    
+        
     <!-- Page-specific (main) content here -->
     <main class="container"> 
-      
-      <!--
-      <section class='paragraph' id='tweet-compose'>This is the main tag.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        HODOR IPSUM</section>
-      -->
       <section class="new-tweet" >
         <div id="error-message1"> <img src="/images/attention-symbol1.png"> You can not send a blank tweet.</div>
         <div id="error-message2"> <img src="/images/attention-symbol1.png"> You have exceeded 140 characters.</div>
         <h2 id='composeTweet'>Compose Tweet</h2>
         <form action="/tweets" id='new-tweet-form' method="POST">
-          
           <textarea name="text" id="tweet-text" placeholder='What are you humming about?'></textarea>
           <div id='buttonWITHcount'>
             <button type="submit" id='tweet-button'>Tweet</button>
@@ -96,39 +71,9 @@
         </form>
       </section>
 
-
         <!-- This section is designated for holding the tweets. -->
-        <section class="tweet-holder" >
-
-          <!-- <div class='whole-tweet'>
-            <article> 
-                <div class='user-information'>
-                  <h3 class='actual-name'>
-                    <picture>
-                    </picture>
-                    Tweeter Name
-                  </h3>
-                  <h3 class='tweeter-handle'>Tweeter Handle</h3>
-                </div>
-                <p>This section here will contain the actual tweet message.</p>
-                
-                <div class='utility'> 
-                  <div class='time'>7 days ago</div>
-                  <div class='misc-buttons'>
-                    <button>Retweet</button> 
-                    <button>Save</button> 
-                    <button>Report</button> 
-                  
-                  </div>
-
-                </div>
-
-            </article>
-          </div> -->
-          
+        <section class="tweet-holder" >         
         </section>
-
-
-</main>
+    </main>
   </body>
 </html>
