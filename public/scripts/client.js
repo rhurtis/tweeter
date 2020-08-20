@@ -6,7 +6,12 @@
 
 
 $(document).ready(function() {
+  // Button for nav bar
+  $('#tweet-link').click(function () { 
+    $('.new-tweet form textarea').focus();
+  })
 
+  /* Returns a HTML tweet element with the data passed in from the tweet parameter  @params tweet */
   const createTweetElement = function(tweet) {
     const tweetElement = `<div class='whole-tweet'>
    <article> 
@@ -35,7 +40,6 @@ $(document).ready(function() {
    </article>
  </div>`;
 
-    //$(".tweet-holder").append(tweetElement);
     $(".tweet-holder").prepend(tweetElement);
   };
 
@@ -79,6 +83,12 @@ $(document).ready(function() {
     });
   };
   loadTweets().then();
+
+
+
+
+
+
 }); 
 
 // XSS prevention
@@ -98,3 +108,4 @@ const theTimeIs = function() {
   let year = date.getFullYear();
   return `${hour}:${minutes} ${day}-${month + 1} -${year}`;
 };
+
